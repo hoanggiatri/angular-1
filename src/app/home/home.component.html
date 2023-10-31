@@ -1,0 +1,51 @@
+<p>home works!</p>
+
+<input type="text" [(ngModel)]="name" />
+<br />
+
+<!-- <h2 *ngIf="age > 30">You are old</h2>
+<h2 *ngIf="age < 30">You are young</h2> -->
+
+<!-- <div *ngIf="age < 30; then tre; else gia"><h2></h2></div>
+
+<ng-template #tre><h2>You are young</h2></ng-template>
+<ng-template #gia><h2>You are old</h2></ng-template>
+
+<h1>Hello my friend, {{ name }}</h1>
+<button (click)="resetName()">Reset name</button>
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>On sale</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let champion of list; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{champion.ten}}</td>
+      <td>{{champion.gia | currency:'VND':'symbol':'1.2'}}</td>
+      <td>
+        <span>{{champion.haGia | onSale | uppercase}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+<br />
+<br />
+<br />
+Tỉnh / Thành:
+<select id="city" (change)="changeCity($event)">
+  <option>Tỉnh / Thành</option>
+  <option *ngFor="let data of vietnam" value="{{ data.Name }}">
+    {{ data.Name }}
+  </option>
+</select>
+<br />
+Quận / Huyện:
+<select id="district" (change)="changeDistrict($event)">
+  <option>Quận / Huyện</option>
+  <option *ngFor="let district of districts" value="{{ district.Name }}">
+    {{ district.Name }}
+  </option>
+</select>
